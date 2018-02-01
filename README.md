@@ -1,6 +1,6 @@
 # Mining / block propagation simulator
 
-Simulates new block announcements propagating across the Bitcoin
+Simulates new block announcements propagating across the Nimiq
 network.
 
 Use these command-line options to control the simulation parameters:
@@ -35,22 +35,22 @@ Example runs:
 $ ./mining_simulator
 Simulating 2016 blocks, default latency 1secs, with 10 miners over 1 runs
 Configuration: Ten equal miners, connected in a ring
-Orphan rate: 0.1984%
+Orphan rate: 4.117%
 Miner hashrate shares (%): 10 10 10 10 10 10 10 10 10 10
-Miner block shares (%): 10.49 9.891 9.692 10.49 8.052 9.891 10.54 9.99 9.245 11.73
+Miner block shares (%): 10.19 9.26 10.66 10.4 9.933 10.19 9.208 9.984 10.61 9.571
 
-$ mining_simulator --latency 20
-Simulating 2016 blocks, default latency 20secs, with 10 miners over 1 runs
+$ mining_simulator --latency 2
+Simulating 2016 blocks, default latency 2secs, with 10 miners over 1 runs
 Configuration: Ten equal miners, connected in a ring
-Orphan rate: 3.075%
+Orphan rate: 7.688%
 Miner hashrate shares (%): 10 10 10 10 10 10 10 10 10 10
-Miner block shares (%): 10.39 9.98 9.724 10.44 8.035 9.826 10.7 9.928 9.314 11.67
+Miner block shares (%): 10.21 9.135 10.69 10.21 10.1 10.32 9.135 9.995 10.85 9.35
 
-$ mining_simulator --latency 20 --config mining_30.cfg --runs 100
-Simulating 2016 blocks, default latency 20secs, with 8 miners over 100 runs
+$ mining_simulator --latency 2 --config mining_30.cfg --runs 100
+Simulating 2016 blocks, default latency 2secs, with 8 miners over 100 runs
 Configuration: 30% miner, with 7 10% miners, selected connectivity
-Orphan rate: 2.715%
+Orphan rate: 3.454%
 Miner hashrate shares (%): 30 10 10 10 10 10 10 10
-Miner block shares (%): 30.25 9.922 10.05 9.959 9.918 9.929 9.932 10.05
+Miner block shares (%): 29.89 10.09 10.04 10.01 9.952 9.89 10.08 10.04
 ```
 
