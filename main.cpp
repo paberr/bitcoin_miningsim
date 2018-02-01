@@ -23,6 +23,7 @@
 
 #include "standard_miner.hpp"
 
+static const double BLOCK_TIME = 60;
 
 static void
 Connect(Miner* m1, Miner* m2, double latency)
@@ -59,7 +60,7 @@ run_simulation(boost::random::mt19937& rng, int n_blocks,
     for (int i = 0; i < n_blocks; i++) {
         int which_miner = dist(rng);
         block_owners.insert(std::make_pair(i, which_miner));
-        auto t_delta = block_time_gen()*600.0;
+        auto t_delta = block_time_gen()*BLOCK_TIME;
         auto t_found = t + t_delta;
         auto f = boost::bind(&Miner::FindBlock, miners[which_miner], boost::ref(simulator), i);
         simulator.schedule(f, t_found);
